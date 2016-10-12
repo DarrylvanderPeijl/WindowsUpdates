@@ -1,0 +1,53 @@
+[{
+	"Update":[
+            {	
+                "KB":"3090343",
+                "Title":"Cluster service stops during the VSS backup in a Windows Server 2012 R2 or Windows Server 2012-based Hyper-V cluster",
+				"Symtoms":"Resolves an issue when multiple VSS backups are in progress, the cluster service may crash because of inconsistent state in the CSV VSS provider. Then, all virtual machines go offline because of the CSV failure. Available for individual download. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2. This fix is included in 3123593.",
+				"download_link":"0",
+				"publish_date":"09-15-2015",
+				"type":"hotfix",
+                "target":"hyperv",
+                "applies_to":"6.3",
+                "included_in":"3123593",
+                "depended_on":"2919355"
+			},
+            {
+				"KB":"3060678",
+                "Title":"Snapshots are not deleted after you perform a backup operation by using VSS in Windows Server 2012 R2",
+				"Symtoms":"Resolves an issue where unneeded snapshots may not be deleted after a backup is completed. This prevents future backups from failing due to a lack of free space consumed by snapshots. Available for individual download. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"0",
+				"publish_date":"09-15-2015",
+				"type":"hotfix",
+                "target":"hyperv",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+            {
+				"KB":"3063283",
+                "Title":"Update to improve the backup of Hyper-V Integrated components in Hyper-V Server 2012 R2",
+				"Symtoms":"Increases the time-out to detect the volumes to shadow copy when the Guest OS has multiple volumes. Available for individual download. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2",
+				"download_link":"0",
+				"publish_date":"09-15-2015",
+				"type":"hotfix",
+                "target":"hyperv",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"3072380",
+                "Title":"Hyper-V cluster unnecessarily recovers the virtual machine resources in Windows Server 2012 R2",
+				"Symtoms":"Resolves an issue on a Hyper-V cluster where the heartbeat component times out during a long-running snapshot. The snapshot fails and the VM restarts. Available for individual download. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2",
+				"download_link":"0",
+				"publish_date":"06-22-2015",
+				"type":"hotfix",
+                "target":"hyperv",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			}
+			]
+	
+}]

@@ -1,42 +1,137 @@
 ﻿[{
 	"Update":[
             {	
-                "KB":"3123593",
-                "Title":"Cluster service stops during the VSS backup in a Windows Server 2012 R2 or Windows Server 2012-based Hyper-V cluster",
-				"Symtoms":"When multiple VSS backups are in progress, the cluster service may crash because of an inconsistent state of the CSV VSS provider. In this situation, all virtual machines go offline because of the CSV failure.",
+                "KB":"3179574",
+                "Title":"August 2016 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2",
+				"Symtoms":"This rollup includes a fix which addresses an issue with cluster services that may stop working when network loss logging occurs when a network connection is down and virtual machines are configured with one possible owner. Available on Windows update or for individual download from Microsoft Update Catalog. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
 				"download_link":"0",
-				"publish_date":"09-15-2015",
-				"type":"hotfix",
-                "target":"hyperv",
-                "applies_to":"6.3",
-                "included_in":"3123593",
-                "depended_on":"2919355"
-			},
-            {
-				"KB":"3060678",
-                "Title":"Snapshots are not deleted after you perform a backup operation by using VSS in Windows Server 2012 R2",
-				"Symtoms":"When you use a backup application that uses VSS to back up files, you might notice an unexpected increase in disk space usage. This may occur in a corner case. When you examine the disk, you find that it is filled with undeleted snapshot files.",
-				"download_link":"http://hotfixv4.microsoft.com/Windows 8.1/Windows Server 2012 R2/sp1/Fix97127/9600/free/484396_intl_x64_zip.exe",
-				"publish_date":"09-15-2015",
-				"type":"hotfix",
-                "target":"hyperv",
+				"publish_date":"08-22-2016",
+				"type":"update",
+                "target":"cluster",
                 "applies_to":"6.3",
                 "included_in":"0",
                 "depended_on":"2919355"
-						},
+			},
             {
+				"KB":"3172614",
+                "Title":"July 2016 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2",
+				"Symtoms":"This rollup includes improvements and fixes from June 2016 update rollup KB 3161606 and May 2016 update rollup KB 3156418 including an update (3153887) that increases the default values of SameSubnetThreshold, CrossSubnetThreshold and RouteHistoryLength to be more tolerant of brief transient network issues. Available on Windows update or for individual download from Microsoft Update Catalog. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"0",
+				"publish_date":"07-21-2016",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+            {
+				"KB":"3130944",
+                "Title":"March 2016 update for Windows Server 2012 R2 clusters to fix several issues",
+				"Symtoms":"This fix resolves an issue in which System Center Data Protection Manager (DPM) filter driver can't track changed volumes or virtual machine (VM) setting files can't be online in Windows Server 2012 R2. Available on Windows update or for individual download from Microsoft Download Center. Includes fixes from 3123593, 3109973, 3090343 and 3076953. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"0",
+				"publish_date":"03-23-2016",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
 				"KB":"3137691",
                 "Title":"LBFO Dynamic Teaming mode may drop packets in Windows Server 2012 R2",
-				"Symtoms":"Windows Server 2012 R2 server may drop packets if the following settings are configured: Network Interface Card (NIC) Teaming is enabled, Teaming Load Balancing Mode: Dynamic, More than one NIC is in Active Mode.",
+				"Symtoms":"This fix resolves an issue in which LBFO Dynamic Teaming mode may drop network packets in Windows Server 2012 R2. In failover cluster scenarios, cluster nodes may be removed from cluster membership due to heartbeat packets not reaching their destination. Available on Windows update or for individual download from Microsoft Download Center. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
 				"download_link":"https://download.microsoft.com/download/C/B/A/CBA58776-A8CA-4CEA-B0C8-C1E15B86EF29/Windows8.1-KB3137691-x64.msu",
-				"publish_date":"03-14-2016",
+				"publish_date":"03-23-2016",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"3139896",
+                "Title":"Hyper-V guest may freeze when it is running failover cluster service together with shared VHDX in Windows Server 2012 R2",
+				"Symtoms":"This fix resolves an issue in which a Hyper-V guest cluster node(s) may freeze when the virtual machine is running failover cluster service together with shared VHDX in Windows Server 2012 R2. Available on Windows update or for individual download from Microsoft Download Center. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"0",
+				"publish_date":"03-23-2016",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"3130939",
+                "Title":"Nonpaged pool memory leak occurs in a Windows Server 2012 R2-based failover cluster",
+				"Symtoms":"Resolves an issue where a cluster node experiences a memory leak in the svxp tag when using Shared VHDX. Available on Windows update or for individual download from Microsoft Download Center. Includes fix from 3068444. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"",
+				"publish_date":"03-23-2016",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"3123538",
+                "Title":"All disks in a storage pool can't be brought online in a Windows Server 2012 R2-based cluster",
+				"Symtoms":"The failure of even a single drive in a Persistent Reservation test in a Windows Server 2012 R2-based failover cluster prevents a storage pool from bringing any disks online in the cluster. Available for individual download. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"http://hotfixv4.microsoft.com/Windows 8.1/Windows Server 2012 R2/sp1/Fix5113952/9600/free/488882_intl_x64_zip.exe",
+				"publish_date":"01-25-2016",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"3091057",
+                "Title":"Cluster validation fails in the 'Validate Simultaneous Failover' test in a Windows Server 2012 R2-based failover cluster",
+				"Symtoms":"Changes some timing of the 'Validate Simultaneous failover' test to more accurately verify the storage compatibility with the failover cluster. Available for individual download.",
+				"download_link":"http://hotfixv4.microsoft.com/Windows 8.1/Windows Server 2012 R2/sp1/Fix3421601/9600/free/486759_intl_x64_zip.exe",
+				"publish_date":"10-28-2015",
 				"type":"hotfix",
-                "target":"hyperv",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"3013769",
+                "Title":"December 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2",
+				"Symtoms":"An update rollup package that resolves issues and includes performance and reliability improvements. Available from Windows Update and for individual download from Download Center. To apply this update, you must first install the update 2919355 on Windows Server 2012 R2.",
+				"download_link":"0",
+				"publish_date":"12-18-2014",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"2919355"
+			},
+			{
+				"KB":"2919355",
+                "Title":"Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 Update April, 2014",
+				"Symtoms":"A cumulative update that includes the security updates and nonsecurity updates including Failover Clustering updates that were released before March 2014. Available from Windows Update and for individual download from Download Center.",
+				"download_link":"0",
+				"publish_date":"04-08-2014",
+				"type":"update",
+                "target":"cluster",
+                "applies_to":"6.3",
+                "included_in":"0",
+                "depended_on":"0"
+			},
+			{
+				"KB":"976424",
+                "Title":"Error code when the kpasswd protocol fails after you perform an authoritative restore: KDC_ERROR_S_PRINCIPAL_UNKNOWN",
+				"Symtoms":"Enables you to add a Windows Server 2012 failover cluster. Install on every domain controller that is running Windows Server 2008 Service Pack 2 (SP2) or Windows Server 2008 R2. Otherwise, Create Cluster may fail when you try to set the password for the cluster computer object, and you receive a CreateClusterNameCOIfNotExists (6783): Unable to set password on <ClusterName$> error message. This hotfix is included in Windows Server 2008 R2 Service Pack 1 (SP1).",
+				"download_link":"http://hotfixv4.microsoft.com/Windows 7/WindowsServer 2008 R2/sp1/Fix336120/7600/free/418332_intl_x64_zip.exe",
+				"publish_date":"12-18-2013",
+				"type":"hotfix",
+                "target":"cluster",
                 "applies_to":"6.3",
                 "included_in":"0",
                 "depended_on":"2919355"
 			}
-
 			]
 	
 }]
